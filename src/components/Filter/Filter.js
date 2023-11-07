@@ -1,9 +1,11 @@
-export const Filter = ({onFilter}) => {
+import {Label, Input} from './Filter.styled'
+
+export const Filter = ({ onFilter }) => {
     
     return (
-        <label>
+        <Label>
             Find contacts by name
-            <input type="text" name="filter" placeholder="Search" onChange={e => onFilter(e.target.value)} />
-        </label>
+            <Input type="text" name="filter" placeholder="Search" onChange={e => onFilter(e.target.value)} />
+        </Label>
     )
 }

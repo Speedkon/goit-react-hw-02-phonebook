@@ -4,6 +4,7 @@ import { ContactForm } from "./ContactForm/ContactForm"
 import { Filter } from "./Filter/Filter"
 import { ContactList } from "./ContactList/ContactList"
 import { Report } from 'notiflix/build/notiflix-report-aio';
+import {Container, Title} from './App.styled'
 
 
 export class App extends Component {
@@ -55,14 +56,14 @@ export class App extends Component {
 
 
     return (
-      <div>
-        <h1>Phonebook</h1>
+      <Container>
+        <Title>Phonebook</Title>
         <ContactForm onAdd={this.addContact} />
 
-        <h2>Contacts</h2>
+        <Title>Contacts</Title>
         <Filter onFilter={this.onFilter}/>
         <ContactList allContacts={filterContacts}  onDelete={this.deleteContact} />
-      </div>
+      </Container>
     )
   }
 
